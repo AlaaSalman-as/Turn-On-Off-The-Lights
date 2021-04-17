@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn On , Turn Off Lights </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        body{
+            background-color:black;
+            color:white;
+        }
+        .lights{
+            height:30vh;
+        }.d{
+            position:relative;
+            bottom: 40px;
+        }
+        .contents,.off {
+            visibility:hidden;
+        }
+        
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<!---------------------------------------------------------------------------->
+<section class="container-fluid">
+    <section class="contents" id="contents1">
+        <div class="d-flex justify-content-around">
+            <img src="./concert-clipart-dj-light-1.png" alt="concert" class="lights">
+            <img src="./concert-clipart-dj-light-1.png" alt="concert"class="lights">
+            <img src="./concert-clipart-dj-light-1.png" alt="concert"class="lights">
+            <img src="./concert-clipart-dj-light-1.png" alt="concert"class="lights">
+        </div>
+    </section>
+    <section class="d-flex justify-content-around">
+        <section class="contents" id="contents2">
+            <div class="d-flex justify-content-center py-5">
+                <img src="./aa7dbf982985810bf8c60f7b6a1906be.gif" alt="cute">
+            </div>
+            <div class="d-flex justify-content-center align-items-center py-3">
+                <img src="./face-with-pleading-eyes_1f97a.png" alt="cute face" height="50.8px" width="50.8px">
+                <img src="./heavy-black-heart_2764.png" alt="hart" height="50.8px" width="50.8px">
+            </div>
+        </section>
+        <section>
+            <div class="on" id="on">
+                <div class="d-flex justify-content-center py-1">
+                    <button class="btn " onclick="lightsOn()">
+                        <img src="./8-80714_big-image-red-record-button-gif-clipart.jpg" alt="press" height="100px" width="100px">
+                    </button>
+                </div>
+                <div class="d-flex justify-content-center py-1">
+                    <label for="angry" id="l">Turn The Lights On !</label>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <img src="pouting-face_1f621.png" alt="angry" id="angry" height="50.8px" width="50.8px">
+                </div>
+            </div>
+            <div class="off contents" id="off" >
+                <div class="d-flex justify-content-center py-1">
+                    <button class="btn " onclick="lightsOff()">
+                        <img src="./8-80714_big-image-red-record-button-gif-clipart.jpg" alt="press" height="100px" width="100px">
+                    </button>
+                </div>
+                <div class="d-flex justify-content-center py-1">
+                    <label for="angry">Turn The Lights Off !</label>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <img src="pouting-face_1f621.png" alt="angry" id="angry" height="50.8px" width="50.8px">
+                </div>
+            </div>
+        </section>
+    </section>
+</section>
+<section class="ml-5">
+    <h2 class="lead">Developed By. Alaa Odeh <img src="pouting-face_1f621.png" alt="angry" id="angry" height="50.8px" width="50.8px"></h2>
+</section>
+
+<script>
+    function lightsOn(){
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        var elements = document.getElementsByClassName("contents");
+        document.getElementById("contents1").style.visibility = "visible";
+        document.getElementById("contents2").style.visibility = "visible";
+        document.getElementById("off").style.visibility = "visible";
+        document.getElementById("on").style.visibility = "hidden";
+    }
+    function lightsOff(){
+        document.body.style.backgroundColor = "black";
+        document.body.style.color ="white";
+        document.getElementById("contents1").style.visibility = "hidden";
+        document.getElementById("contents2").style.visibility = "hidden";
+        document.getElementById("off").style.visibility = "hidden";
+        document.getElementById("on").style.visibility = "visible"; 
+    }
+</script>
+
+<!---------------------------------------------------------------------------->
+</body>
+</html>
